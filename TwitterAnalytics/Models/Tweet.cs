@@ -15,9 +15,17 @@ namespace TwitterAnalytics.Models
     public partial class Tweet
     {
         public int TweetId { get; set; }
+        public long TwitterId { get; set; }
         public int JobId { get; set; }
         public string TweetText { get; set; }
         public string CreatedBy { get; set; }
         public string Place { get; set; }
+        public int FollowersCount { get; set; }
+        public bool Favorited { get; set; }
+        public int FavoriteCount { get; set; }
+        public bool ReTweeted { get; set; }
+        public int RetweetCount { get; set; }
+        public DateTime CreatedDate { get; set; }
+
     }
 }

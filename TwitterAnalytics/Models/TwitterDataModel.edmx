@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TwitterDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TwitterDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DataCollectionJob">
           <Key>
             <PropertyRef Name="JobId" />
@@ -19,7 +19,7 @@
           </Key>
           <Property Name="TweetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="JobId" Type="int" Nullable="false" />
-          <Property Name="TweetText" Type="nvarchar" MaxLength="150" />
+          <Property Name="TweetText" Type="nvarchar" MaxLength="180" />
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
           <Property Name="Place" Type="nvarchar" MaxLength="150" />
         </EntityType>
@@ -27,8 +27,7 @@
           <EntitySet Name="DataCollectionJob" EntityType="Self.DataCollectionJob" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tweet" EntityType="Self.Tweet" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TwitterDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -46,7 +45,7 @@
           </Key>
           <Property Name="TweetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="JobId" Type="Int32" Nullable="false" />
-          <Property Name="TweetText" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TweetText" Type="String" MaxLength="180" FixedLength="false" Unicode="true" />
           <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Place" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
